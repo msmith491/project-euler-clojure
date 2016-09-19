@@ -1,11 +1,11 @@
 (ns project-euler.core
   (:gen-class :main true))
 (load "problem_1")
+(load "problem_2")
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Project Euler Problems In Clojure"
   [& args]
-  ; (println (format "args: %s" args))
   (if (= (count args) 0)
     (System/exit 0)
       ((resolve

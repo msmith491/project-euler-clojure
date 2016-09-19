@@ -2,6 +2,7 @@
   (:gen-class :main true))
 (load "problem_1")
 (load "problem_2")
+(load "problem_3")
 
 (defn -main
   "Project Euler Problems In Clojure"

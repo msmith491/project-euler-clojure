@@ -14,18 +14,17 @@
                       (cond
                         (> (* curr curr) n) true
                         :else (cond
-                               (or (= 0 (mod n curr))
-                                   (= 0 (mod n (+ curr 2)))) false
+                                (or (= 0 (mod n curr))
+                                    (= 0 (mod n (+ curr 2)))) false
                                 :else (recur (+ curr 6))))))))
 
   (defn prime-factors [bignum]
     (filter
-      #(prime? %)
-      (filter
-        #(= 0 (mod bignum %))
-        (take-while
-          #(<= % (Math/sqrt (/ bignum 2)))
-          (iterate inc 1)))))
+     #(prime? %)
+     (filter
+      #(= 0 (mod bignum %))
+      (take-while
+       #(<= % (Math/sqrt (/ bignum 2)))
+       (iterate inc 1)))))
 
-  (println (apply max (prime-factors 600851475143)))
-)
+  (println (apply max (prime-factors 600851475143))))

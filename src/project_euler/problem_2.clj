@@ -15,9 +15,9 @@
 
   (defn result [n]
     (reduce +'
-      (filter #(= 0 (mod % 2))
-        (take-while #(< % n)
-          (map fib
-             (iterate inc 1))))))
+            (filter #(= 0 (mod % 2))
+                    (take-while #(< % n)
+                                (map fib
+                                     (iterate inc 1))))))
 
   (println (result 4000000)))

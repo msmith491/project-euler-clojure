@@ -2,7 +2,7 @@
   (:gen-class :main true))
 
 (loop
- [x 7]
+ [x 9]
   (load (format "problem_%s" x))
   (cond
     (< 1 x) (recur (dec x))

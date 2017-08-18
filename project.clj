@@ -7,4 +7,6 @@
   :main ^:skip-aot project-euler.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
-  :plugins [[lein-cljfmt "0.5.7"]])
+  :plugins [[lein-cljfmt "0.5.7"]]
+  :cljfmt {:indents
+           {* [[:inner 0]]}})
